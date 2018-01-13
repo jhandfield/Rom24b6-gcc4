@@ -2028,18 +2028,22 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
 #if defined(macintosh)
-    #define PLAYER_DIR	""			/* Player files	*/
-    #define TEMP_FILE	"romtmp"
-    #define NULL_FILE	"proto.are"		/* To reserve one stream */
-#elif defined(MSDOS)
-    #define PLAYER_DIR	""			/* Player files */
-    #define TEMP_FILE	"romtmp"
-    #define NULL_FILE	"nul"			/* To reserve one stream */
-#else
-    #define PLAYER_DIR      "../player/"        	/* Player files */
-    #define GOD_DIR         "../gods/"  		/* list of gods */
-    #define TEMP_FILE	"../player/romtmp"
-    #define NULL_FILE	"/dev/null"		/* To reserve one stream */
+#define PLAYER_DIR	""			/* Player files	*/
+#define TEMP_FILE	"romtmp"
+#define NULL_FILE	"proto.are"		/* To reserve one stream */
+#endif
+
+#if defined(MSDOS)
+#define PLAYER_DIR	""			/* Player files */
+#define TEMP_FILE	"romtmp"
+#define NULL_FILE	"nul"			/* To reserve one stream */
+#endif
+
+#if defined(unix)
+#define PLAYER_DIR      "../player/"        	/* Player files */
+#define GOD_DIR         "../gods/"  		/* list of gods */
+#define TEMP_FILE	"../player/romtmp"
+#define NULL_FILE	"/dev/null"		/* To reserve one stream */
 #endif
 
 #define AREA_LIST       "area.lst"  /* List of areas*/
