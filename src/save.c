@@ -34,7 +34,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#if !defined(__MACH__)
 #include <malloc.h>
+#endif
+#if defined(__MACH__)
+#include <stdlib.h>
+#endif
 #include "merc.h"
 #include "recycle.h"
 #include "lookup.h"
