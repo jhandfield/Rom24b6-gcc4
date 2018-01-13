@@ -1,7 +1,7 @@
 CC      = gcc
 PROF    = -O -g
 NOCRYPT =
-C_FLAGS =  -Wall $(PROF) $(NOCRYPT)
+C_FLAGS =  -w $(PROF) $(NOCRYPT)
 L_FLAGS =  $(PROF)
 
 O_FILES = act_comm.o act_enter.o act_info.o act_move.o act_obj.o act_wiz.o \
