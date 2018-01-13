@@ -25,6 +25,11 @@
 *	ROM license, in the file Rom24/doc/rom.license			   *
 ***************************************************************************/
 
+/* If we're compiling from macOS, pretend we're unix because we are for all
+    intents and purposes */
+#if defined(__MACH__)
+#define unix
+#endif
 
 /*
  * Accommodate old non-Ansi compilers.
