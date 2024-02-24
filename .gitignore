@@ -53,3 +53,8 @@ dkms.conf
 
 # macOS files
 .DS_Store
+
+# ROM 2.4 files
+area/notes.not
+player/*
+src/rom
